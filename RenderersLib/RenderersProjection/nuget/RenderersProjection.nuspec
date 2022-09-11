@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>Renderers</id>
+        <version>0.1.0-prerelease</version>
+        <authors>Volker Veidt</authors>
+        <description>A gathering of Renderers</description>
+        <dependencies>
+            <group targetFramework="net6.0-windows10.0.22621.0" />
+            <group targetFramework=".NETCoreApp3.0" />
+            <group targetFramework="UAP10.0" />
+            <group targetFramework=".NETFramework4.8.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <!--Support .NET 6, UAP, .NET Framework 4.8.1, C++ -->
+        <!--Architecture-netural assemblies-->
+        <file src="..\..\_build\AnyCPU\Release\RenderersProjection\bin\RenderersProjection.dll" target="lib\net6.0-windows10.0.22621.0\RenderersProjection.dll" />
+        <file src="..\..\_build\x64\Release\Renderers\bin\Renderers\Renderers.winmd" target="lib\uap10.0\Renderers.winmd" />
+        <file src="..\..\_build\x64\Release\Renderers\bin\Renderers\Renderers.winmd" target="lib\net481\Renderers.winmd" />
+        <!--Architecture-specific implementation DLLs should be copied into RID-relative folders-->
+        <file src="..\..\_build\x64\Release\Renderers\bin\Renderers\Renderers.dll" target="runtimes\win10-x64\native\Renderers.dll" />
+        <!--To support x86 and Arm64, build Renderers for those other architectures and uncomment the entries below.-->
+        <!--<file src="..\..\_build\Win32\Release\Renderers\bin\Renderers\Renderers.dll" target="runtimes\win10-x86\native\Renderers.dll" />-->
+        <!--<file src="..\..\_build\arm64\Release\Renderers\bin\Renderers\Renderers.dll" target="runtimes\win10-arm64\native\Renderers.dll" />-->
+    </files>
+</package>

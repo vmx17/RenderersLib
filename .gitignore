@@ -396,3 +396,14 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# just my ignore condition
+* - Copy.*
+*_/
+*_.*
+*bkup.*
+*bkup
+*bkup/
+*backup.*
+*backup
+*backup/

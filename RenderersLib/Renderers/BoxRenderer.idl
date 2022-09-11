@@ -1,0 +1,12 @@
+namespace Renderers
+{
+    //[default_interface]
+    runtimeclass BoxRenderer : Microsoft.UI.Xaml.Controls.Control
+    {
+        BoxRenderer();
+        static Microsoft.UI.Xaml.DependencyProperty Param0Property{ get; set; };
+        Int32 Param0;
+        static Microsoft.UI.Xaml.DependencyProperty Param1Property{ get; set; };
+        Int32 Param1;
+    }
+}

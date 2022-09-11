@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows10.0.22621.0</TargetFramework>
+        <Platform>AnyCPU</Platform>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <PropertyGroup>
+        <CsWinRTIncludes>Renderers</CsWinRTIncludes>
+        <CsWinRTGeneratedFilesDir>$(OutDir)</CsWinRTGeneratedFilesDir>
+    </PropertyGroup>
+    <PropertyGroup>
+        <GeneratedNugetDir>.\nuget\</GeneratedNugetDir>
+        <NuspecFile>$(GeneratedNugetDir)RenderersProjection.nuspec</NuspecFile>
+        <OutputPath>$(GeneratedNugetDir)</OutputPath>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Renderers\Renderers.vcxproj" />
+    </ItemGroup>
+
+</Project>
