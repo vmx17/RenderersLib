@@ -15,6 +15,7 @@
         <NuspecFile>$(GeneratedNugetDir)RenderersProjection.nuspec</NuspecFile>
         <OutputPath>$(GeneratedNugetDir)</OutputPath>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.0.0" />

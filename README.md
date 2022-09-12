@@ -1,6 +1,7 @@
 # RenderersLib - A Sample Project of XAML control as Windows Runtime Component and its Projection to NuGet package, then consume it in C# desktop application.
-The title is too long.
+last update: 9/11/2022
 
+The title is too long.
 ## What it is
  A sample of XAML control library in C++/WinRT and Projection project to NuGet Package. It will be comsumed in C# using Windows App SDK.
 
@@ -8,16 +9,18 @@ The title is too long.
  
  Currently building WRC stops in compile error. This repository was made to ask Microsoft Q&A but welcome opinions from everyone.
  
+## the first priority Error
+ does not match build architecture on Prorection project.
+
 ## How to reproduce the current error
- last update: 9/11/2022
  1. Open solution file "_RenderersLib.sln_" in VisualStudio 2022.
  2. Restore NuGet packages.
- 3. right click "_Renderers_" project file in Solution Explorer and select "Project Only" --> "Build Only Renderes"
- 4. You will get;  
- _Error	C2039	'BoxRenderer': is not a member of 'winrt::Renderers::implementation'_.
- 
-Though the error seems very primitive but I cannot debug _generated code_.
+ 3. Build Solution.
 
+## update
+ - _Error	C2039	'BoxRenderer': is not a member of 'winrt::Renderers::implementation'_.
+		-> fixed: move `#include "BoxRenderer.h"` from "BoxRenderer.cpp" to "pch.h".
+		
 ## Reference
 - [**XAML custom (templated) controls with C++/WinRT**](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl)
 - [**Build XAML controls with C++/WinRT**](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/xaml-templated-controls-cppwinrt-winui-3)

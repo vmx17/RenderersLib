@@ -1,7 +1,9 @@
 namespace Renderers
 {
     //[default_interface]
+    //[webhosthidden]
     runtimeclass BoxRenderer : Microsoft.UI.Xaml.Controls.Control
+    //runtimeclass BoxRenderer : Microsoft.UI.Xaml.Controls.ContentControl
     {
         BoxRenderer();
         static Microsoft.UI.Xaml.DependencyProperty Param0Property{ get; set; };

@@ -13,3 +13,11 @@
 #include <wil/cppwinrt_helpers.h>
 
 #include <winrt/Windows.UI.Xaml.Interop.h>
+#include <winrt/Windows.System.Threading.h>
+#include <winrt/Windows.Graphics.Display.h>
+#include <winrt/Windows.UI.Core.h>
+#include "BoxRenderer.h"
+
+typedef unsigned long uint32;
+typedef unsigned long long uint64;
+typedef long long int64;
