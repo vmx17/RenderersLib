@@ -7,6 +7,8 @@ The title is too long.
 
  So the app will be C# based WinUI3 Desktop application using XAML Windows Runtime Component written in C++/WinRT (but still I don't know it is possible).
  
+ The _develop_ branch is the newest.
+ 
  Currently building WRC stops in compile error. This repository was made to ask Microsoft Q&A but welcome opinions from everyone.
  
 ## the first priority Error
