@@ -1,9 +1,10 @@
 namespace Renderers
 {
+    //runtimeclass BoxRenderer : Microsoft.UI.Xaml.Controls.Control
+    // the SwapChainPanel does not inherit Control
     //[default_interface]
     //[webhosthidden]
-    runtimeclass BoxRenderer : Microsoft.UI.Xaml.Controls.Control
-    //runtimeclass BoxRenderer : Microsoft.UI.Xaml.Controls.ContentControl
+    runtimeclass BoxRenderer : Microsoft.UI.Xaml.Controls.ContentControl
     {
         BoxRenderer();
         static Microsoft.UI.Xaml.DependencyProperty Param0Property{ get; set; };

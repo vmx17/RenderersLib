@@ -2,9 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0-windows10.0.22621.0</TargetFramework>
-        <Platform>AnyCPU</Platform>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+        <Platforms>AnyCPU</Platforms>
+        <!-- Workaround for MSB3271 error on processor architecture mismatch -->
+        <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
     </PropertyGroup>
     <PropertyGroup>
         <CsWinRTIncludes>Renderers</CsWinRTIncludes>
@@ -16,12 +17,24 @@
         <OutputPath>$(GeneratedNugetDir)</OutputPath>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
     </PropertyGroup>
+    
     <ItemGroup>
         <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.0.0" />
+        <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.25188-preview" />
+        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.2.220902.1-preview1" />
     </ItemGroup>
+    
     <ItemGroup>
         <ProjectReference Include="..\Renderers\Renderers.vcxproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <EmbeddedResource Update="Properties\Resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>

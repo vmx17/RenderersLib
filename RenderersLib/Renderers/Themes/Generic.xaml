@@ -7,7 +7,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:BoxRenderer">
-                    <SwapChainPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="{TemplateBinding Param0}" Height="{TemplateBinding Param1}" Background="{TemplateBinding Background}" />
+                    <SwapChainPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="{TemplateBinding Param0}" Height="{TemplateBinding Param1}" Background="{TemplateBinding Background}">
+                        <TextBlock>This is the SwapChainPanel in NuGet package.</TextBlock>
+                    </SwapChainPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
